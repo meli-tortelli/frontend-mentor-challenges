@@ -1,0 +1,289 @@
+:root {
+  --bg-page: hsl(226, 43%, 10%);
+  --bg-card-info: hsl(235, 46%, 20%);
+
+  --base-font-color: hsl(235, 45%, 61%);
+  --accent-font-color: hsl(236, 100%, 87%);
+
+  --bg-card-user: hsl(246, 80%, 60%);
+  --bg-card-work: hsl(15, 100%, 70%);
+  --bg-card-play: hsl(195, 74%, 62%);
+  --bg-card-study: hsl(348, 100%, 68%);
+  --bg-card-exercise: hsl(145, 58%, 55%);
+  --bg-card-social: hsl(264, 64%, 52%);
+  --bg-card-selfcare: hsl(43, 84%, 65%);
+
+  --title-font-size: 1.125rem;
+  --hours-font-size: 2rem;
+  --last-week-time: 0.875rem;
+
+  --padding: 1.25rem;
+  --border-radius: 0.437rem;
+}
+
+/* --- reset styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-page);
+
+  font-family: 'Rubik', sans-serif;
+  color: var(--base-font-color);
+  line-height: 0.875;
+}
+
+ul,
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding);
+  align-items: center;
+}
+
+/* --- user-card --- */
+.user {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.header-user-info {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: var(--bg-card-user);
+  padding: 1.25rem;
+
+  line-height: 2rem;
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+}
+
+.profile-photo {
+  height: 4.5rem;
+  width: 4.5rem;
+
+  border: 0.2rem solid white;
+  border-radius: 50%;
+}
+
+.profile-name > h1 {
+  color: var(--accent-font-color);
+  font-weight: 300;
+  font-size: calc(0.277rem + var(--title-font-size));
+}
+
+.profile-name > p {
+  color: var(--accent-font-color);
+}
+
+.menu {
+  height: 3.225rem;
+  background-color: var(--bg-card-info);
+  border-radius: var(--border-radius);
+
+  cursor: pointer;
+}
+
+.menu > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: var(--padding);
+}
+
+.menu li:hover {
+  color: var(--accent-font-color);
+}
+/* --- cards --- */
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  width: 100%;
+  min-width: 70%;
+  height: 60%;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 1.2rem;
+}
+
+.header:hover {
+  opacity: 0.8;
+}
+
+.header-img {
+  height: 25px;
+  width: 100%;
+}
+
+/* --- header cards color --- */
+.hour-time {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card-info);
+  padding: 2rem var(--padding);
+  gap: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.hour-time-head,
+.hour-time-count {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* .hour-time-count span {
+  align-self: flex-end;
+} */
+
+.title {
+  color: var(--accent-font-color);
+  font-size: var(--title-font-size);
+  font-weight: 500;
+}
+
+.hours {
+  color: var(--accent-font-color);
+  font-size: var(--hours-font-size);
+  font-weight: 300;
+}
+
+.last-week-time {
+  font-size: var(--last-week-time);
+  font-weight: 400;
+}
+
+.work-card {
+  background-color: var(--bg-card-work);
+}
+
+.play-card {
+  background-color: var(--bg-card-play);
+}
+
+.study-card {
+  background-color: var(--bg-card-study);
+}
+
+.exercise-card {
+  background-color: var(--bg-card-exercise);
+}
+
+.social-card {
+  background-color: var(--bg-card-social);
+}
+
+.selfcare-card {
+  background-color: var(--bg-card-selfcare);
+}
+
+@media (min-width: 1200px) {
+  main > .container {
+    display: grid;
+    grid-gap: 1.5rem;
+  }
+
+  .cards {
+    width: 90%;
+  }
+
+  .grid-cards {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      'user work play study'
+      'user exercise social selfcare';
+    grid-gap: 1.5rem;
+
+    padding: 5rem;
+    justify-content: stretch;
+    align-content: center;
+  }
+
+  .user {
+    grid-area: user;
+  }
+
+  .work-card {
+    grid-area: work;
+  }
+
+  .play-card {
+    grid-area: play;
+  }
+
+  .study-card {
+    grid-area: study;
+  }
+
+  .exercise-card {
+    grid-area: exercise;
+  }
+
+  .social-card {
+    grid-area: social;
+  }
+
+  .selfcare-card {
+    grid-area: selfcare;
+  }
+
+  .user {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .header-user-info {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .menu {
+    height: 50%;
+  }
+
+  .menu > ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem var(--padding);
+  }
+
+  .hour-time-count .hours {
+    font-size: calc(var(--title-font-size) + 1rem);
+  }
+
+  .hour-time-count .last-week-time {
+    font-size: 0.75rem;
+  }
+}
