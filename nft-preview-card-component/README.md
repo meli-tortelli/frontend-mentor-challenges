@@ -19,3 +19,11 @@
 -----------------------
 
 
+## Screenshots
+
+#### Frontend Mentor design:
+![image](https://user-images.githubusercontent.com/56207729/156921620-1634acd7-efaa-493e-afc7-7ff678dd8489.png)
+
+
+#### My solution: 
+![image](https://user-images.githubusercontent.com/56207729/156921718-53b66e18-4b6f-4988-ab51-34e7c87ebb2f.png)
