@@ -1,0 +1,443 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --bg-header: hsl(200deg 100% 62%);
+  --color-soft-red: hsl(7, 99%, 70%);
+  --color-yellow: hsla(51, 100%, 49%, 0.364);
+  --color-grayish-blue: hsl(210, 4%, 67%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --color-dark-moderate-cyan: hsl(168, 34%, 41%); /*(footer)*/
+  --color-dark-desaturated-cyan: hsl(
+    167,
+    40%,
+    24%
+  ); /*(graphic design text)*/
+  --color-dark-grayish-blue: hsl(232, 10%, 55%); /*(text-mural*/
+  --color-dark-blue: hsl(198, 62%, 26%); /*(photography text)*/
+
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+
+  /*font-family*/
+  --barlow-font-family: 'Barlow', sans-serif;
+  --fraunces-font-family: 'Fraunces', serif;
+  --inter-font-family: 'Inter', sans-serif;
+
+  /* font-sizes */
+  --font-size-logo: 2.5rem;
+  --font-size-regular: 1.25rem;
+  --font-size-photo-text: 2.3rem;
+
+  /* padding, margins, borders */
+  --padding-box-lr: 1.8rem;
+  --padding-box-tb: 3.5rem;
+  --padding-b-lr: 1.8rem;
+  --padding-b-tb: 1rem;
+
+  --padding-center-arrow: 8rem 0 2rem 0;
+
+  --border-radius-b: 2rem;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  /* color: var(--color-white); */
+  color: black;
+  overflow-x: hidden;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+  color: var(--color-white);
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+
+  display: flex;
+
+  background-color: var(--bg-header);
+}
+
+main {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* header */
+.navigation {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-box-tb) var(--padding-box-lr);
+}
+
+.logo {
+  font-family: var(--inter-font-family);
+  font-weight: 900;
+  font-size: var(--font-size-logo);
+  color: var(--color-white);
+}
+
+.footer-logo {
+  font-size: 2.5rem;
+}
+
+.navigation-menu {
+  display: none;
+  visibility: hidden;
+  width: 40%;
+  font-family: var(--inter-font-family);
+  font-weight: 300;
+  font-size: var(--font-size-regular);
+}
+
+.navigation-links {
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.--link-button {
+  border: none;
+  background: transparent;
+  background: var(--color-white);
+  font-family: var(--fraunces-font-family);
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: var(--border-radius-b);
+  padding: var(--padding-b-tb) var(--padding-b-lr);
+
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* hero-section */
+.hero-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-model {
+  position: absolute;
+  text-align: center;
+}
+
+.hero-image-text {
+  font-family: var(--fraunces-font-family);
+  font-size: var(--font-size-photo-text);
+  font-weight: 900;
+  color: var(--color-white);
+
+  padding: var(--padding-center-arrow);
+
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.hero-icon-banner {
+  font-size: 10em;
+}
+
+.hero-banner-image {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-image {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* mural section */
+.photo-mural-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-text-mural {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; */
+
+  font-size: var(--font-size-regular);
+  padding: calc(1rem + var(--padding-b-tb))
+    calc(1rem - var(--padding-b-lr));
+  text-align: center;
+
+  max-width: 100%;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-mural-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-color: var(--color-white);
+}
+
+.photo-mural-title {
+  font-family: var(--fraunces-font-family);
+  font-weight: 900;
+  font-size: 2rem;
+  color: black;
+
+  padding: 1rem 2rem;
+}
+
+.photo-mural-text {
+  width: 100%;
+  font-family: var(--inter-font-family);
+  font-weight: 300;
+  font-size: var(--font-size-regular);
+  color: var(--color-dark-grayish-blue);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+
+.photo-mural--buton {
+  font-family: var(--fraunces-font-family);
+  font-size: var(--font-size-regular);
+  font-weight: 900;
+  font-size: var(--font-size-regular);
+  color: black;
+  border-bottom: 0.5rem solid var(--color-yellow);
+}
+
+.photo-mural {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.photo-mural-title-image {
+  position: relative;
+  z-index: 1;
+
+  font-family: var(--fraunces-font-family);
+  font-weight: 700;
+  color: var(--color-dark-moderate-cyan);
+}
+
+.text-image {
+  height: auto;
+  position: absolute;
+  text-align: center;
+
+  padding: var(--padding-b-tb) var(--padding-b-lr);
+}
+
+.photo-mural-text-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  font-family: var(--barlow-font-family);
+  font-weight: 600;
+  color: var(--color-dark-moderate-cyan);
+}
+
+.photo-mural-image-design-text {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.photography {
+  color: var(--color-dark-blue);
+}
+
+/* testimonials section -- */
+.testimonials-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.testimonials-title {
+  font-family: var(--fraunces-font-family);
+  color: var(--color-dark-grayish-blue);
+  padding: var(--padding-box-tb) 0;
+}
+
+.testimonial-image {
+  height: 80px;
+  width: 80px;
+  clip-path: circle();
+}
+
+.testimonial-section {
+  width: 100%;
+  height: 18rem;
+  padding: var(--padding-b-tb) var(--padding-box-lr);
+  text-align: center;
+  align-items: center;
+}
+
+.testimonial-coment {
+  font-family: var(--barlow-font-family);
+  font-weight: 600;
+  color: var(--very-dark-grayish-blue);
+
+  padding: calc(0.5rem + var(--padding-b-tb))
+    calc(0.5rem - var(--padding-b-lr));
+}
+
+.testimonial-person {
+  font-family: var(--fraunces-font-family);
+  font-weight: 900;
+  color: var(--very-dark-desaturated-blue);
+
+  padding-bottom: 0.8rem;
+}
+
+.testimonial-person-job {
+  font-family: var(--barlow-font-family);
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: var(--color-dark-grayish-blue);
+}
+
+/* images mural*/
+.photo-mural-section-footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  overflow-x: hidden;
+}
+
+.images-footer {
+  width: 25%;
+  object-fit: cover;
+  height: 180px;
+}
+
+/* .photo-mural-section-footer img {
+  /* width: 350px;
+  height: 350px; */
+/* 
+  width: 185px;
+  height: 180px;
+  object-fit: cover;
+} */
+
+/* footer */
+.footer {
+  width: 100%;
+  height: 18rem;
+  background-color: hsl(168deg 35% 60% / 92%);
+  color: var(--color-dark-moderate-cyan);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-title {
+  font-family: var(--inter-font-family);
+  color: var(--color-dark-moderate-cyan);
+}
+
+.navigation-links-footer,
+a {
+  font-family: var(--barlow-font-family);
+  font-weight: 300;
+  color: var(--color-dark-moderate-cyan);
+  display: flex;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.navigation-social-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.8rem;
+}
+
+/* breakpoint 1200 */
+@media (min-width: 1200px) {
+  .navigation--mobile {
+    visibility: hidden;
+  }
+
+  .navigation-menu {
+    font-size: 1rem;
+    display: block;
+    visibility: visible;
+    color: white;
+  }
+
+  .--link-button {
+    font-size: 0.8rem;
+  }
+
+  .hero-model {
+    width: 100%;
+    max-height: 100vh;
+    text-align: center;
+  }
+
+  .hero-banner-image {
+    max-width: 100%;
+    max-height: 58rem;
+    object-fit: cover;
+    object-position: center bottom;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .photo-mural-section-footer {
+    max-width: 100%;
+    max-height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
